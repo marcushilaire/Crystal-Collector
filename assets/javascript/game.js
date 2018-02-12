@@ -26,17 +26,21 @@ for (i=19; i<121; i++){
 
 var randomCrystalA = function() {
     crystalA = crystalNumbers[Math.floor(Math.random() * crystalNumbers.length)];
-    console.log(crystalA);
+    console.log("crystal A " + crystalA);
 }
 var randomCrystalB = function() {
     crystalB = crystalNumbers[Math.floor(Math.random() * crystalNumbers.length)];
-    console.log(crystalB);
+    console.log("crystal B " + crystalB);
 }
 var randomCrystalC = function () {
     crystalC = crystalNumbers[Math.floor(Math.random() * crystalNumbers.length)];
-    console.log(crystalC);
+    console.log("crystal C " + crystalC);
 }
 var randomCrystalD = function () {
     crystalD = crystalNumbers[Math.floor(Math.random() * crystalNumbers.length)];
-    console.log(crystalD);
+    console.log("crystal D " + crystalD);
+}
+var randomGoal = function () {
+    goal = goalNumbers[Math.floor(Math.random()* goalNumbers.length)];
+    console.log("Goal " + goal);
 }
