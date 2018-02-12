@@ -54,37 +54,28 @@ var newRound = function() {
     $("#current").html(currentNumber);
 }
 
-// if (parseInt(currentNumber) === parseInt(goal)){
-//     wins++;
-//     newRound();
-// }
-// if (currentNumber > goal){
-//     losses++;
-//     newRound();
-// }
 //  on click functions
 $("#crystalA").on("click", function(){
     currentNumber = parseInt(crystalA) + parseInt(currentNumber);
-    console.log(parseInt(currentNumber));
     $("#current").html(currentNumber);  
 })
 
 $("#crystalB").on("click", function(){
     currentNumber = parseInt(crystalB) + parseInt(currentNumber);
-    console.log(parseInt(currentNumber));
     $("#current").html(currentNumber);  
 })
 
 $("#crystalC").on("click", function(){
     currentNumber = parseInt(crystalC) + parseInt(currentNumber);
-    console.log(parseInt(currentNumber));
     $("#current").html(currentNumber); 
 })  
 
 $("#crystalD").on("click", function(){
     currentNumber = parseInt(crystalD) + parseInt(currentNumber);
-    console.log(parseInt(currentNumber));
     $("#current").html(currentNumber);    
+})
+$("#play").on("click", function(){
+    $("#play").html("New Round!");
 })
 // game conditionals
 $(".crystal").on("click", function(){
