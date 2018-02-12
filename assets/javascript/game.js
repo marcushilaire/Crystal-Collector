@@ -15,14 +15,12 @@ var goalNumbers = []; // numbers 19 through 120 will be pushed to this array
 for (i=1; i<13; i++){
     crystalNumbers.push(i);
 }
-
-console.log(" 1 through 12" + crystalNumbers)
-console.log(" 19 through 120" +goalNumbers)
-
+console.log(" 1 through 12 " + crystalNumbers)
 
 for (i=19; i<121; i++){
     goalNumbers.push(i);
 }
+console.log(" 19 through 120 " + goalNumbers)
 
 var randomCrystalA = function() {
     crystalA = crystalNumbers[Math.floor(Math.random() * crystalNumbers.length)];
