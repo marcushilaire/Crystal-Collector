@@ -57,22 +57,38 @@ var newRound = function() {
 //  on click functions
 $("#crystalA").on("click", function(){
     currentNumber = parseInt(crystalA) + parseInt(currentNumber);
-    $("#current").html(currentNumber);  
+    $("#current").html(currentNumber);
+    $(this).shake({
+        speed: 50,
+        distance: 5
+    });
 })
 
 $("#crystalB").on("click", function(){
     currentNumber = parseInt(crystalB) + parseInt(currentNumber);
-    $("#current").html(currentNumber);  
+    $("#current").html(currentNumber);
+    $(this).shake({
+        speed: 50,
+        distance: 5
+    });
 })
 
 $("#crystalC").on("click", function(){
     currentNumber = parseInt(crystalC) + parseInt(currentNumber);
-    $("#current").html(currentNumber); 
+    $("#current").html(currentNumber);
+    $(this).shake({
+        speed: 50,
+        distance: 5
+    });  
 })  
 
 $("#crystalD").on("click", function(){
     currentNumber = parseInt(crystalD) + parseInt(currentNumber);
-    $("#current").html(currentNumber);    
+    $("#current").html(currentNumber);
+    $(this).shake({
+        speed: 50,
+        distance: 5
+    });  
 })
 $("#play").on("click", function(){
     $("#play").html("New Round!");
