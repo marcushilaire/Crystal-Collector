@@ -1,10 +1,10 @@
 // Declaring variables
-var goal = 0;
-var currentNumber = 0;
-var crystalA = 0;
-var crystalB = 0;
-var crystalC = 0;
-var crystalD = 0;
+var goal;
+var currentNumber = "placeholder";
+var crystalA;
+var crystalB;
+var crystalC;
+var crystalD;
 var wins = 0;
 var losses = 0;
 var crystalNumbers = []; // numbers 1 through 12 will be pushed to this array
@@ -41,4 +41,23 @@ var randomCrystalD = function () {
 var randomGoal = function () {
     goal = goalNumbers[Math.floor(Math.random()* goalNumbers.length)];
     console.log("Goal " + goal);
+}
+var newRound = function() {
+    randomCrystalA();
+    randomCrystalB();
+    randomCrystalC();
+    randomCrystalD();
+    randomGoal();
+    $("#wins").html("Wins: " + wins);
+    $("#losses").html("Losses: " + losses);
+    $("#goal").html(goal);
+    $("#current").html(currentNumber);
+}
+if (currentNumber == goal){
+    wins++;
+    newRound();
+}
+if( currentNumber > goal){
+    losses++;
+    newRound;
 }
