@@ -1,6 +1,6 @@
 // Declaring variables
 var goal;
-var currentNumber = "placeholder";
+var currentNumber = 0;
 var crystalA;
 var crystalB;
 var crystalC;
@@ -15,13 +15,12 @@ var goalNumbers = []; // numbers 19 through 120 will be pushed to this array
 for (i=1; i<13; i++){
     crystalNumbers.push(i);
 }
-console.log(" 1 through 12 " + crystalNumbers)
 
 for (i=19; i<121; i++){
     goalNumbers.push(i);
 }
-console.log(" 19 through 120 " + goalNumbers)
 
+// picking random numbers per crystal
 var randomCrystalA = function() {
     crystalA = crystalNumbers[Math.floor(Math.random() * crystalNumbers.length)];
     console.log("crystal A " + crystalA);
@@ -48,16 +47,53 @@ var newRound = function() {
     randomCrystalC();
     randomCrystalD();
     randomGoal();
+    currentNumber = 0;
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: " + losses);
     $("#goal").html(goal);
     $("#current").html(currentNumber);
 }
-if (currentNumber == goal){
-    wins++;
-    newRound();
-}
-if( currentNumber > goal){
-    losses++;
-    newRound;
-}
+
+// if (parseInt(currentNumber) === parseInt(goal)){
+//     wins++;
+//     newRound();
+// }
+// if (currentNumber > goal){
+//     losses++;
+//     newRound();
+// }
+//  on click functions
+$("#crystalA").on("click", function(){
+    currentNumber = parseInt(crystalA) + parseInt(currentNumber);
+    console.log(parseInt(currentNumber));
+    $("#current").html(currentNumber);  
+})
+
+$("#crystalB").on("click", function(){
+    currentNumber = parseInt(crystalB) + parseInt(currentNumber);
+    console.log(parseInt(currentNumber));
+    $("#current").html(currentNumber);  
+})
+
+$("#crystalC").on("click", function(){
+    currentNumber = parseInt(crystalC) + parseInt(currentNumber);
+    console.log(parseInt(currentNumber));
+    $("#current").html(currentNumber); 
+})  
+
+$("#crystalD").on("click", function(){
+    currentNumber = parseInt(crystalD) + parseInt(currentNumber);
+    console.log(parseInt(currentNumber));
+    $("#current").html(currentNumber);    
+})
+// game conditionals
+$(".crystal").on("click", function(){
+    if (parseInt(currentNumber) === parseInt(goal)){
+        wins++;
+        newRound();
+    };
+    if (currentNumber > goal){
+        losses++;
+        newRound();
+    };
+})
