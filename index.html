@@ -11,17 +11,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1> Gems are truly outrageous </h1>
-    <button type="button" class="btn btn-danger" onclick="newRound()" id="play"> Play!</button>
-    <div id="goal"></div>
-    <div id="current"></div>
-    <div id="wins"></div>
-    <div id="losses"></div>
-    <img class="crystal" id="crystalA" src="./assets/images/crystalA.png">
-    <img class="crystal" id="crystalB" src="./assets/images/crystalB.png">
-    <img class="crystal" id="crystalC" src="./assets/images/crystalC.png">
-    <img class="crystal" id="crystalD" src="./assets/images/crystalD.png">
-    <script src="./assets/javascript/game.js"></script>
-    <script src="./assets/javascript/jquery.ui.shake.min.js"></script>    
+    <div class="container">
+        <div class="row">
+            <h2 class="col-xs-12 col-md-8"> Gems are truly outrageous </h2>
+            <button type="button" class="col-xs-12 col-md-4 btn btn-danger" onclick="newRound()" id="play"> Play!</button>
+        </div>    
+        <div class="row">
+            <div class="col-xs-6" id="goal"></div>
+            <div class="col-xs-6" id="current"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6" id="wins"></div>
+            <div class="col-xs-6 col-md-6" id="losses"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img class="crystal" id="crystalA" src="./assets/images/crystalA.png">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">            
+                <img class="crystal" id="crystalB" src="./assets/images/crystalB.png">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">            
+                <img class="crystal" id="crystalC" src="./assets/images/crystalC.png">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">                        
+                <img class="crystal" id="crystalD" src="./assets/images/crystalD.png">
+            </div>
+            <script src="./assets/javascript/game.js"></script>
+            <script src="./assets/javascript/jquery.ui.shake.min.js"></script>    
+        </div>
+    </div>
 </body>
 </html>
