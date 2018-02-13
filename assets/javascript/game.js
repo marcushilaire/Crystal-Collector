@@ -50,14 +50,14 @@ var newRound = function() {
     currentNumber = 0;
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: " + losses);
-    $("#goal").html(goal);
-    $("#current").html(currentNumber);
+    $("#goal").html("Your Goal: " + goal);
+    $("#current").html("Your Score: " + currentNumber);
 }
 
 //  on click functions
 $("#crystalA").on("click", function(){
     currentNumber = parseInt(crystalA) + parseInt(currentNumber);
-    $("#current").html(currentNumber);
+    $("#current").html("Your Score: " + currentNumber);
     $(this).shake({
         speed: 50,
         distance: 5
@@ -66,7 +66,7 @@ $("#crystalA").on("click", function(){
 
 $("#crystalB").on("click", function(){
     currentNumber = parseInt(crystalB) + parseInt(currentNumber);
-    $("#current").html(currentNumber);
+    $("#current").html("Your Score: " + currentNumber);
     $(this).shake({
         speed: 50,
         distance: 5
@@ -75,7 +75,7 @@ $("#crystalB").on("click", function(){
 
 $("#crystalC").on("click", function(){
     currentNumber = parseInt(crystalC) + parseInt(currentNumber);
-    $("#current").html(currentNumber);
+    $("#current").html("Your Score: " + currentNumber);
     $(this).shake({
         speed: 50,
         distance: 5
@@ -84,7 +84,7 @@ $("#crystalC").on("click", function(){
 
 $("#crystalD").on("click", function(){
     currentNumber = parseInt(crystalD) + parseInt(currentNumber);
-    $("#current").html(currentNumber);
+    $("#current").html("Your Score: " + currentNumber);
     $(this).shake({
         speed: 50,
         distance: 5
